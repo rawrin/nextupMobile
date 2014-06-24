@@ -1,16 +1,21 @@
 {
   "name": "nextupBackbone",
   "version": "0.0.1",
-  "description": "Using Backbone to create a front-end for NextUp that gives you article recommendations based on your current read.",
-  "main": "app.js",
+  "private": true,
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node ./bin/www"
   },
-  "keywords": [
-    "node",
-    "backbone",
-    "nextup"
-  ],
-  "author": "Warren Ng",
-  "license": "MIT"
+  "dependencies": {
+    "backbone": "^1.1.2",
+    "body-parser": "~1.0.0",
+    "cookie-parser": "~1.0.1",
+    "debug": "~0.7.4",
+    "express": "~4.2.0",
+    "gulp": "^3.8.1",
+    "hjs": "~0.0.6",
+    "jquery": "^2.1.1",
+    "morgan": "~1.0.0",
+    "static-favicon": "~1.0.0",
+    "underscore": "^1.6.0"
+  }
 }

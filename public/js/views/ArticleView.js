@@ -1,8 +1,11 @@
-var ArticleView = Backbone.View.extend({
+var $        = require('jquery');
+var Backbone = require('backbone');
+var _        = require('underscore');
+Backbone.$   = $;
 
-  // tagname: 'li',
+module.exports = Backbone.View.extend({
 
-  template: _.template('<li class="article"><i><%= title %></i> <a href="<%= url %>">URL</a></li>'),
+  template: _.template('<li class="article"><%= title %></li>'),
 
   events: {
     'click .article': function() {

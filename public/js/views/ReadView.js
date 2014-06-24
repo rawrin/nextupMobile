@@ -1,6 +1,13 @@
-var UnreadView = Backbone.View.extend({
+var $        = require('jquery');
+var Backbone = require('backbone');
+var _        = require('underscore');
+Backbone.$   = $;
 
-  el: '<ul class="unreadView"></ul>',
+var ArticleView = require('./ArticleView');
+
+module.exports = Backbone.View.extend({
+
+  el: '<ul class="readView"></ul>',
 
   initialize: function() {
     this.collection.on("change", function(article){
@@ -10,12 +17,14 @@ var UnreadView = Backbone.View.extend({
     this.render();
   },
 
+
+  // Iterate through this.collection, assumes ReadView gets passed entire collection
   render: function() {
     this.$el.children().detach();
 
     var viewArray = [];
     for (var i = 0; i < this.collection.length; i++) {
-      if (!this.collection.at(i).attributes.read) {
+      if (this.collection.at(i).attributes.read) {
         var miniArticle = new ArticleView({model: this.collection.at(i)});
         var miniArticleEl = miniArticle.render();
         viewArray.push(miniArticleEl);

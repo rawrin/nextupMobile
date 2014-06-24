@@ -1,4 +1,11 @@
-var Articles = Backbone.Collection.extend({
+var $        = require('jquery');
+var Backbone = require('backbone');
+var _        = require('underscore');
+Backbone.$   = $;
+
+var ArticleModel = require('../models/ArticleModel');
+
+module.exports = Backbone.Collection.extend({
 
   model: ArticleModel,
 
@@ -6,7 +13,7 @@ var Articles = Backbone.Collection.extend({
   url: '/api/articles',
 
   fetch: function () {
-    //this.empty();
+    this.reset();
     $.get(this.url, function(arrayJSON){
       var arr = JSON.parse(arrayJSON);
       this.add(arr);

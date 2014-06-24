@@ -1,0 +1,113 @@
+*, *:before, *:after {
+  -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  font-family: verdana;
+  height: 100%;
+  min-height: 100%;
+}
+
+.read {
+  -webkit-transition: -webkit-transform 0.5s;
+  -moz-transition: -moz-transform 0.5s;
+  transition: transform 0.5s;
+  position: fixed;
+  left: 0;
+  /*border: 1px dashed #333333;*/
+  width: 20rem;
+  top: 4rem;
+  bottom: 0;
+  background: rgba(235, 235, 235, 0.9);
+  margin: 0;
+}
+
+.unread {
+  -webkit-transition: -webkit-transform 0.5s;
+  -moz-transition: -moz-transform 0.5s;
+  transition: transform 0.5s;
+  position: fixed;
+  right: 0;
+  width: 20rem;
+  top: 4rem;
+  bottom: 0;
+  /*border: 1px dashed #333333;*/
+  background: rgba(235, 235, 235, 0.9);
+  margin: 0;
+}
+
+.content {
+  overflow: auto;
+  padding: 5rem 22rem 2rem;
+  /*background: green;*/
+  min-height: 100%;
+}
+
+
+
+@media screen and (max-width: 60rem) {
+  .content {
+    padding: 5rem 2rem 2rem;
+    /*background: yellow;*/
+    -webkit-transition: padding 0s 0.5s;
+    -moz-transition: padding 0s 0.5s;
+    transition: padding 0s 0.5s;
+  }
+  .unread {
+    -webkit-transform: translate(20rem);
+  }
+  .read {
+    -webkit-transform: translate(-20rem);
+  }
+  .unread::after {
+    content: 'U';
+    color: white;
+    position: absolute;
+    display: block;
+    width: 4rem;
+    height: 4rem;
+    left: -4rem;
+    top: 0;
+    background-color: black;
+    background-color: rgba(0,0,0,0.25);
+  }
+  .read::after {
+    content: 'R';
+    color: white;
+    position: absolute;
+    display: block;
+    width: 4rem;
+    height: 4rem;
+    right: -4rem;
+    top: 0;
+    background-color: black;
+    background-color: rgba(0,0,0,0.25);
+  }
+  .unread:hover {
+    -webkit-transform: translate(0rem);
+  }
+  .read:hover {
+    -webkit-transform: translate(0rem);
+  }
+}
+
+.article {
+  /*list-style-type: none;*/
+  cursor: pointer;
+}
+
+#header {
+  display: inline;
+  position: fixed;
+  width: 100%;
+  padding: 0;
+  height: 4rem;
+  text-align: center;
+  font-size: 2rem;
+  font-family: 'Pacifico', cursive;
+  font-weight: bold;
+  background: white;
+  background: rgba(255,255,255,0.9);
+}
