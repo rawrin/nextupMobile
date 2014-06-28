@@ -5,7 +5,7 @@ Backbone.$   = $;
 
 var ReadView           = require('./ReadView');
 var UnreadView         = require('./UnreadView');
-var CurrentArticleView = require('./CurrentArticleView');
+var ContentView = require('./ContentView');
 
 module.exports = Backbone.View.extend({
 
