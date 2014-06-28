@@ -12,10 +12,7 @@ module.exports = Backbone.Model.extend({
 
     params.library.on('read', function(article) {
       this.set('currentArticle', article);
-      // Should renew collection with similar articles to currentArticle
-      // params.library.fetch();
+      // On read request, sends POST request to API and retrieves content + similar articles.
     }, this);
   }
-
-
 });
