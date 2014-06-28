@@ -18,6 +18,6 @@ module.exports = Backbone.View.extend({
   render: function() {
     $('.readView').html((new ReadView({collection: this.model.attributes.library})).$el);
     $('.unreadView').html((new UnreadView({collection: this.model.attributes.library})).$el);
-    $('.contentView').html((new CurrentArticleView({model: this.model.get('currentArticle')})).$el);
+    $('.contentView').html((new ContentView({model: this.model.get('currentArticle')})).$el);
   }
 });
