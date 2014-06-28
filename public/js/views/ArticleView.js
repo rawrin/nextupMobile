@@ -5,17 +5,19 @@ Backbone.$   = $;
 
 module.exports = Backbone.View.extend({
 
-  template: _.template('<li class="article"><%= title %></li>'),
+  tagName: 'li',
+  className: 'article',
+  template: _.template('<%= title %>'),
 
   events: {
-    'click .article': function() {
-      // calls read function on model to switch unread to read and triggers "read"
+    'click': function() {
       this.model.read();
     }
   },
 
   render: function() {
-    return this.$el.html(this.template(this.model.attributes));
+    this.$el.html(this.template(this.model.attributes));
+    return this.$el;
   }
 
 });

@@ -2,15 +2,20 @@
 <html>
   <head>
     <link rel="stylesheet" href="css/index.css">
-    <link href='http://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+    <link href="http://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet" type="text/css">
 
     <script src="data/data.js"></script>
-    <script src="js/bundle.js"></script>
+    <script src="build/bundle.js"></script>
   </head>
   <body>
-      <div id='header'>Nextup</div>
-      <div class='content'>Article</div>
-      <div class='unread'>Unread</div>
-      <div class='read'>Read</div>
+      <div id="header">Nextup
+        <div class="menuView">
+          <img src="img/menu.png">
+          <div class="menuContent"></div>
+        </div>
+      </div>
+      <div class="contentView">Article</div>
+      <div class="unreadView">Unread</div>
+      <div class="readView">Read</div>
   </body>
 </html>

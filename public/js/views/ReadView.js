@@ -7,7 +7,8 @@ var ArticleView = require('./ArticleView');
 
 module.exports = Backbone.View.extend({
 
-  el: '<ul class="readView"></ul>',
+  tagName: 'ul',
+  className: 'readContent',
 
   initialize: function() {
     this.collection.on("change", function(article){
@@ -17,8 +18,6 @@ module.exports = Backbone.View.extend({
     this.render();
   },
 
-
-  // Iterate through this.collection, assumes ReadView gets passed entire collection
   render: function() {
     this.$el.children().detach();
 

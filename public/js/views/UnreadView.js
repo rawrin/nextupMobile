@@ -7,7 +7,8 @@ var ArticleView = require('./ArticleView');
 
 module.exports = Backbone.View.extend({
 
-  el: '<ul class="unreadView"></ul>',
+  tagName: 'ul',
+  className: 'unreadContent',
 
   initialize: function() {
     this.collection.on("change", function(article){

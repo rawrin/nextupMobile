@@ -5,15 +5,15 @@ Backbone.$   = $;
 
 module.exports = Backbone.View.extend({
 
-  // el: '<div class="content">Content</div>',
-  template: _.template('<div><%= content %></div>'),
+  className: 'content',
+  template: _.template('<%= content %>'),
 
   initialize: function() {
     this.render();
   },
 
   render: function() {
-      this.$el.html(this.template(this.model.toJSON()));
+    this.$el.html(this.template(this.model.toJSON()));
     return this.$el;
   }
 

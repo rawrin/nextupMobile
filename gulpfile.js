@@ -7,13 +7,17 @@ gulp.task('browserify', function() {
   return browserify('./public/js/app.js')
     .bundle()
     .pipe(source('bundle.js'))
-    .pipe(gulp.dest('./public/js/'));
+    .pipe(gulp.dest('./public/build/'));
 });
 
 gulp.task('js', ['browserify'] ,function() {
-  return gulp.src('./public/js/bundle.js')
+  return gulp.src('./public/build/bundle.js')
     .pipe(uglify())
-    .pipe(gulp.dest('./public/js/'));
+    .pipe(gulp.dest('./public/build/'));
 });
 
-gulp.task('default', ['js']);
+gulp.task('watch', function() {
+  gulp.watch('./public/js/**/*.js', ['js']);
+});
+
+gulp.task('default', ['js', 'watch']);
