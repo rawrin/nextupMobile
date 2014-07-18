@@ -5,8 +5,8 @@ Backbone.$   = $;
 
 module.exports = Backbone.View.extend({
 
-  tagName: 'ul',
-  className: 'menuContent',
+  tagName: 'li',
+  template: _.template('<%= text %>'),
 
   render: function() {
 

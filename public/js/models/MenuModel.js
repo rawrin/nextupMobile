@@ -3,13 +3,13 @@ var Backbone = require('backbone');
 var _        = require('underscore');
 Backbone.$   = $;
 
-module.exports = Backbone.View.extend({
+module.exports = Backbone.Model.extend({
 
-  tagName: 'ul',
-  className: 'menuContent',
-
-  render: function() {
-
-  }
+  defaults: {
+    'type': null,
+    'text': null,
+    'url': null
+  },
 
 });
+

@@ -3,8 +3,8 @@ var Backbone = require('backbone');
 var _        = require('underscore');
 Backbone.$   = $;
 
-var ReadView           = require('./ReadView');
-var UnreadView         = require('./UnreadView');
+var ReadView    = require('./ReadView');
+var UnreadView  = require('./UnreadView');
 var ContentView = require('./ContentView');
 
 module.exports = Backbone.View.extend({
