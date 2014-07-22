@@ -3,15 +3,16 @@
   <head>
     <link rel="stylesheet" href="css/index.css">
     <link href="http://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet" type="text/css">
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
 
     <script src="data/data.js"></script>
     <script src="build/bundle.js"></script>
   </head>
   <body>
       <div id="header">Nextup
-        <div class="menuView">
+<!--         <div class="menuView">
           <img src="img/menu.png">
-        </div>
+        </div> -->
       </div>
       <div class="contentView">Article</div>
       <div class="unreadView">Unread</div>

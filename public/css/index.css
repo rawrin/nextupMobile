@@ -32,8 +32,17 @@ html, body {
   width: 15rem;
   top: 4rem;
   bottom: 0;
-  /*border: 1px dashed #333333;*/
   background: rgba(235, 235, 235, 0.9);
+  margin: 0;
+}
+
+.unreadContent {
+  padding: 0;
+  margin: 0;
+}
+
+.readContent {
+  padding: 0;
   margin: 0;
 }
 
@@ -90,7 +99,7 @@ html, body {
 }
 
 .article {
-  /*list-style-type: none;*/
+  list-style-type: none;
   cursor: pointer;
 }
 
@@ -142,3 +151,25 @@ html, body {
   bottom: 0;
   top: 4rem;
 }
+
+.article {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  background-color: rgba(230, 245, 245, 1);
+  display: inline-block;
+  width: 100%;
+  line-height: 3rem;
+  vertical-align: middle;
+  /*color: white;*/
+  position: relative;
+  height: 4rem;
+  text-align: center;
+  /*margin-bottom: 2px;*/
+  padding: 5px;
+  font-size: 15px;
+  font-family: 'Open Sans', sans-serif;
+  border-bottom: 1px solid white;
+
+}
+
