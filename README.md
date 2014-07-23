@@ -1,4 +1,4 @@
-nextupBackbone
+nextupMobile
 ==============
-Nextup Backbone client used to connect to the Nextup API to serve semantically similar articles based on user preference.
+Mobile client created to connect toe Nextup's API to serve semantically similar articles based on user preference.
 

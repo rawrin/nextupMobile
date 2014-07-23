@@ -67,25 +67,27 @@ html, body {
     -webkit-transform: translate(-15rem);
   }
   .unreadView::after {
-    content: 'U';
+    content: '<';
+    font-size: 3rem;
     color: white;
     position: absolute;
     display: block;
-    width: 4rem;
+    width: 2rem;
     height: 4rem;
-    left: -4rem;
+    left: -2rem;
     top: 0;
     background-color: black;
     background-color: rgba(0,0,0,0.25);
   }
   .readView::after {
-    content: 'R';
+    content: '>';
+    font-size: 3rem;
     color: white;
     position: absolute;
     display: block;
-    width: 4rem;
+    width: 2rem;
     height: 4rem;
-    right: -4rem;
+    right: -2rem;
     top: 0;
     background-color: black;
     background-color: rgba(0,0,0,0.25);
@@ -161,11 +163,9 @@ html, body {
   width: 100%;
   line-height: 3rem;
   vertical-align: middle;
-  /*color: white;*/
   position: relative;
   height: 4rem;
   text-align: center;
-  /*margin-bottom: 2px;*/
   padding: 5px;
   font-size: 15px;
   font-family: 'Open Sans', sans-serif;
